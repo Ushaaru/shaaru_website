@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const verifyBtn = document.getElementById("verifyBtn");
     const message = document.getElementById("message");
 
-    const correctOTP = "6371"; // Change this to your desired OTP.
+    const correctOTP = "6372"; // Change this to your desired OTP.
 
     for (let i = 0; i < otpInputs.length; i++) {
         otpInputs[i].addEventListener("input", function () {
@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
     verifyBtn.addEventListener("click", function () {
         const enteredOTP = Array.from(otpInputs).map((input) => input.value).join("");
         if (enteredOTP === correctOTP) {
-            message.textContent = "Your code is correct!";
+            message.textContent = "Your answer is correct!";
         } else {
-            message.textContent = "Incorrect code. Please try again.";
+            message.textContent = "Incorrect answer. Please try again.";
         }
     });
 });
